@@ -10,7 +10,7 @@ root.geometry("500x500")
 # create lookup function
 def cityLookup():
   try:
-    api_request = requests.get("https://api.openweathermap.org/data/2.5/weather?q=" + city.get() + "&appid=82ccd7079a318bf163422706a0f39c8b")
+    api_request = requests.get("https://api.openweathermap.org/data/2.5/weather?q=" + city.get() + "&appid={api key goes here}")
     # strip from json
     api = json.loads(api_request.content)
     name = api["name"]
